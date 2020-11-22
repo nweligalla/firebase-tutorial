@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <h1>Cloud Cafe</h1>
+    <div class="content">
+      <form id="add-addcafeform">
+          <input type="text" name="name" placeholder="Cafe Name">
+          <input type ="text" name ="city" placeholder="Cafe city">
+          <button>Add Cafe</button>
+      </form>
+      <ul id="cafe-list"></ul>
+    </div>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyAU1m_U1yxHvBNx2heJbNCX946hxBuFnI0",
+        authDomain: "fir-tutorial-6d6a2.firebaseapp.com",
+        databaseURL: "https://fir-tutorial-6d6a2.firebaseio.com",
+        projectId: "fir-tutorial-6d6a2",
+        storageBucket: "fir-tutorial-6d6a2.appspot.com",
+        messagingSenderId: "782768490859",
+        appId: "1:782768490859:web:fedbade6bf0688d4b4e42e",
+        measurementId: "G-0RM0XCG4ET",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
